@@ -1,0 +1,8 @@
+<form action="{% url 'index' %}" method="post">
+    {% csrf_token %}
+{{form}}
+<input type="submit" name="create_task">
+</form>
+{% for tasks in task %}
+<p>{{tasks.task}}</p>
+{% endfor %}
